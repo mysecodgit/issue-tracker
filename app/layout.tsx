@@ -38,7 +38,7 @@ export default function RootLayout({
               {/* <ThemePanel /> */}
             </Theme>
           </AuthProvider>
-        </QueryClientProvider>
+          </QueryClientProvider>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { Flex, Grid } from "@radix-ui/themes";
+import { Flex, Grid, Text } from "@radix-ui/themes";
 import IssueChart from "./issueChart";
 import IsuesSummary from "./issueSummary";
 import LatestIssues from "./latestIssues";

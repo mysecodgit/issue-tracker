@@ -1,7 +1,14 @@
 "use client";
 
 import { Skeleton } from "@/app/components";
-import { Avatar, Box, DropdownMenu, Flex, Text } from "@radix-ui/themes";
+import {
+  Avatar,
+  Box,
+  Container,
+  DropdownMenu,
+  Flex,
+  Text,
+} from "@radix-ui/themes";
 import classnames from "classnames";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -10,14 +17,18 @@ import { AiFillBug } from "react-icons/ai";
 
 const Navbar = () => {
   return (
-    <div className="border-b flex items-center justify-between py-5 px-5 lg:px-32">
-      <div className="flex items-center">
-        <Link href="/">
-          <AiFillBug />
-        </Link>
-        <NavLinks />
-      </div>
-      <AuthStatus />
+    <div className="border-b px-5 py-5 ">
+      <Container>
+        <Flex justify="between">
+          <div className="flex items-center">
+            <Link href="/">
+              <AiFillBug />
+            </Link>
+            <NavLinks />
+          </div>
+          <AuthStatus />
+        </Flex>
+      </Container>
     </div>
   );
 };
@@ -73,7 +84,7 @@ const AuthStatus = () => {
               size="2"
               referrerPolicy="no-referrer"
             />
-            <Text>{session!.user?.name}</Text>
+            <Text className="hidden md:flex">{session!.user?.name}</Text>
           </Flex>
         </DropdownMenu.Trigger>
         <DropdownMenu.Content className="mt-2">

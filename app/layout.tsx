@@ -32,7 +32,7 @@ export default function RootLayout({
           <AuthProvider>
             <Theme>
               <Navbar />
-              <main className="pt-5 px-5 lg:px-32">
+              <main className="pt-5 px-5 ">
                 <Container>{children}</Container>
               </main>
               {/* <ThemePanel /> */}
